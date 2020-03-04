@@ -23,11 +23,13 @@ class Scraper
     c = a.css("div.social-icon-container")
     b = {}
     c.css("a").each do |x|
-      
       if x['href'].include?("twitter")
         b[:twitter] = x['href']
-      elsif x.include?("linkedin")
-        b[:linkedin] = x
+      elsif x['href'].include?("linkedin")
+        b[:linkedin] = x['href']
+      elsif x['href'].include?("github")
+        b[:github] = x['href']
+      elsif x['href'].include?("")
       else
     end
   end

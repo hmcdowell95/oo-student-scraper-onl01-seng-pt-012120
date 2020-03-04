@@ -24,7 +24,7 @@ class Scraper
     c.css("a").each do |x|
       
       if x['href'].include?("twitter")
-        b[:twitter] = x
+        b[:twitter] = x['href']
       elsif x.include?("linkedin")
         b[:linkedin] = x
       else

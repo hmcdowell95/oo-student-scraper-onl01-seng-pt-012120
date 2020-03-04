@@ -22,9 +22,9 @@ class Scraper
     a = Nokogiri::HTML(open(profile_url))
     c = a.css("div.social-icon-container")
     c.css("a").each do |x|
+      binding.pry
       if x.include?("twitter")
         b[:twitter] = x
-        binding.pry
       elsif x.include?("linkedin")
         b[:linkedin] = x
       else

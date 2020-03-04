@@ -36,6 +36,6 @@ class Scraper
     b[:profile_quote] = a.css("div.profile-quote").text
     b[:bio] = a.css("div.description-holder").text.strip.split("\n").first
   end
-  
+  b
 end
 

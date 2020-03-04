@@ -23,7 +23,7 @@ class Scraper
     c = a.css("div.social-icon-container")
     c.css("a").each do |x|
       
-      if x.include?("twitter")
+      if x['href'].include?("twitter")
         b[:twitter] = x
       elsif x.include?("linkedin")
         b[:linkedin] = x

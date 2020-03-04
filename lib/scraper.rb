@@ -23,6 +23,9 @@ class Scraper
     c = a.css("div.social-icon-container")
     c.css("a").each do |x|
       if x.include?("twitter")
+        b[:twitter] = x
+      elsif x.include?("linkedin")
+        b[:linkedin]
     b = {
     :profile_quote => a.css("div.profile-quote").text,
     :bio => a.css("div.description-holder").text.strip.split("\n").first}
